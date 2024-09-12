@@ -29,3 +29,30 @@ $( document ).ready(function() {
 
 
 function geraPosicao(min, max) {
+
+    return Math.random() * (max - min) + "%";
+
+}
+
+function criaDecoracao(simbolo) {
+
+    let decoracao = document.createElement("div");
+
+    decoracao.innerHTML = simbolo;
+
+    decoracao.classList.add("decoracao");
+
+    decoracao.style.top = geraPosicao(0, 90);
+
+    decoracao.style.left = geraPosicao(0, 90);
+
+    document.body.appendChild(decoracao);
+
+    setTimeout(() => {
+
+        decoracao.remove();
+
+    }, 3000);
+
+}
+
