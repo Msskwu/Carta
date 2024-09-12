@@ -24,3 +24,8 @@ $( document ).ready(function() {
     }
    
 });
+    console.log("opa, desviei");
+
+
+
+function geraPosicao(min, max) {
